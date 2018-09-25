@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,36 +19,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvI-1F-fVO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvI-1F-fVO">
                                 <rect key="frame" x="139" y="20" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xV-Lj-urr">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xV-Lj-urr">
                                 <rect key="frame" x="16" y="49" width="343" height="1120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-jU-kjB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-jU-kjB">
                                         <rect key="frame" x="235" y="122" width="34" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUA-aD-Kzg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFN-1V-uqE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFN-1V-uqE">
                                         <rect key="frame" x="74" y="122" width="99" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="View Contacts"/>
                                         <connections>
                                             <action selector="btnView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HwO-a3-dwc"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T03-Dn-Mim">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T03-Dn-Mim">
                                         <rect key="frame" x="74" y="46" width="195" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -55,9 +51,8 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="I8L-pq-2II"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21g-JO-8zn">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21g-JO-8zn">
                                         <rect key="frame" x="74" y="8" width="195" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -65,21 +60,21 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="pyi-Fa-iJp"/>
                                         </connections>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zKn-TA-YwI">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zKn-TA-YwI">
                                         <rect key="frame" x="63" y="912" width="216" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="cax-Ca-zDA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRI-Co-H0a">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRI-Co-H0a">
                                         <rect key="frame" x="63" y="874" width="34" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Back"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJA-Na-szz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJA-Na-szz">
                                         <rect key="frame" x="74" y="84" width="195" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -88,9 +83,39 @@
                                         </connections>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="wJA-Na-szz" firstAttribute="centerX" secondItem="zKn-TA-YwI" secondAttribute="centerX" id="02a-uj-T9h"/>
+                                    <constraint firstItem="VFN-1V-uqE" firstAttribute="baseline" secondItem="Oa9-jU-kjB" secondAttribute="baseline" id="0pr-jj-W9T"/>
+                                    <constraint firstItem="wJA-Na-szz" firstAttribute="leading" secondItem="VFN-1V-uqE" secondAttribute="leading" id="5mb-TF-1OB"/>
+                                    <constraint firstItem="BRI-Co-H0a" firstAttribute="leading" secondItem="1xV-Lj-urr" secondAttribute="leading" constant="63" id="6Qv-SK-FoP"/>
+                                    <constraint firstItem="Oa9-jU-kjB" firstAttribute="leading" secondItem="VFN-1V-uqE" secondAttribute="trailing" constant="62" id="8gh-nk-Bbs"/>
+                                    <constraint firstItem="T03-Dn-Mim" firstAttribute="top" secondItem="21g-JO-8zn" secondAttribute="bottom" constant="8" symbolic="YES" id="9Zn-gY-o0o"/>
+                                    <constraint firstItem="zKn-TA-YwI" firstAttribute="top" secondItem="BRI-Co-H0a" secondAttribute="bottom" constant="8" symbolic="YES" id="AZk-CY-SlS"/>
+                                    <constraint firstItem="wJA-Na-szz" firstAttribute="trailing" secondItem="Oa9-jU-kjB" secondAttribute="trailing" id="EFm-fA-oph"/>
+                                    <constraint firstItem="21g-JO-8zn" firstAttribute="top" secondItem="1xV-Lj-urr" secondAttribute="topMargin" id="JG2-Bp-YHJ"/>
+                                    <constraint firstItem="21g-JO-8zn" firstAttribute="leading" secondItem="T03-Dn-Mim" secondAttribute="leading" id="JNG-2D-Vw5"/>
+                                    <constraint firstItem="T03-Dn-Mim" firstAttribute="leading" secondItem="wJA-Na-szz" secondAttribute="leading" id="Mej-oO-XyV"/>
+                                    <constraint firstItem="wJA-Na-szz" firstAttribute="top" secondItem="T03-Dn-Mim" secondAttribute="bottom" constant="8" symbolic="YES" id="OdU-7c-idS"/>
+                                    <constraint firstItem="zKn-TA-YwI" firstAttribute="bottom" secondItem="1xV-Lj-urr" secondAttribute="bottomMargin" id="PS2-NV-cce"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKn-TA-YwI" secondAttribute="trailing" constant="64" id="Pdi-kJ-8r4"/>
+                                    <constraint firstItem="T03-Dn-Mim" firstAttribute="trailing" secondItem="wJA-Na-szz" secondAttribute="trailing" id="Rgl-cw-VT6"/>
+                                    <constraint firstItem="zKn-TA-YwI" firstAttribute="centerX" secondItem="1xV-Lj-urr" secondAttribute="centerX" id="X3R-aA-UXF"/>
+                                    <constraint firstItem="21g-JO-8zn" firstAttribute="trailing" secondItem="T03-Dn-Mim" secondAttribute="trailing" id="eTg-76-XfB"/>
+                                    <constraint firstItem="BRI-Co-H0a" firstAttribute="leading" secondItem="zKn-TA-YwI" secondAttribute="leading" id="ee4-N5-HjO"/>
+                                    <constraint firstItem="VFN-1V-uqE" firstAttribute="top" secondItem="wJA-Na-szz" secondAttribute="bottom" constant="8" symbolic="YES" id="rwI-Qx-QCI"/>
+                                    <constraint firstItem="BRI-Co-H0a" firstAttribute="top" secondItem="1xV-Lj-urr" secondAttribute="top" constant="874" id="smz-rP-9bZ"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wvI-1F-fVO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1fu-m0-TBB"/>
+                            <constraint firstItem="1xV-Lj-urr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5A7-bo-544"/>
+                            <constraint firstAttribute="bottom" secondItem="1xV-Lj-urr" secondAttribute="bottom" constant="-502" id="RAZ-S9-mfR"/>
+                            <constraint firstItem="1xV-Lj-urr" firstAttribute="top" secondItem="wvI-1F-fVO" secondAttribute="bottom" constant="8" symbolic="YES" id="ZcZ-pN-L3l"/>
+                            <constraint firstItem="wvI-1F-fVO" firstAttribute="centerX" secondItem="1xV-Lj-urr" secondAttribute="centerX" id="bAT-6P-4eK"/>
+                            <constraint firstItem="1xV-Lj-urr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dXm-bk-xZs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
